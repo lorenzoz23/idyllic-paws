@@ -34,10 +34,11 @@ export default class Sidebar extends Component {
               }}
             />
           </View>
-          <ListItem header first>
+          <ListItem first noIndent>
             <Text>Learn More</Text>
           </ListItem>
           <ListItem
+            noIndent
             icon
             style={{
               backgroundColor: '#70E6CF',
@@ -58,6 +59,7 @@ export default class Sidebar extends Component {
             </Right>
           </ListItem>
           <ListItem
+            noIndent
             icon
             style={{
               backgroundColor: '#70E6CF',
@@ -78,6 +80,7 @@ export default class Sidebar extends Component {
             </Right>
           </ListItem>
           <ListItem
+            noIndent
             icon
             style={{
               backgroundColor: '#70E6CF',
@@ -98,6 +101,7 @@ export default class Sidebar extends Component {
             </Right>
           </ListItem>
           <ListItem
+            noIndent
             icon
             style={{
               backgroundColor: '#70E6CF',
@@ -118,6 +122,7 @@ export default class Sidebar extends Component {
             </Right>
           </ListItem>
           <ListItem
+            noIndent
             icon
             style={{
               backgroundColor: '#70E6CF',
@@ -143,10 +148,11 @@ export default class Sidebar extends Component {
               <Icon active name="arrow-forward" style={{ color: '#374650' }} />
             </Right>
           </ListItem>
-          <ListItem header first>
+          <ListItem first noIndent>
             <Text>Connect</Text>
           </ListItem>
           <ListItem
+            noIndent
             icon
             style={{ backgroundColor: '#70E6CF', borderRadius: 10 }}
           >

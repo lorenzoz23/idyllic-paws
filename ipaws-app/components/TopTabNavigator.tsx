@@ -1,7 +1,14 @@
 import React, { Component } from 'react';
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
-import { Container, Left, Button, Icon, Right, Title } from 'native-base';
-import { Header } from 'react-native/Libraries/NewAppScreen';
+import {
+  Container,
+  Left,
+  Button,
+  Icon,
+  Right,
+  Title,
+  Header
+} from 'native-base';
 import Home from './Home';
 import Services from './Services';
 import Clients from './Clients';
@@ -9,7 +16,11 @@ import Contact from './Contact';
 
 const Tab = createMaterialTopTabNavigator();
 
-export default class TopTabNavigator extends Component {
+interface TopTabNavigatorProps {
+  navigation: any;
+}
+
+export default class TopTabNavigator extends Component<TopTabNavigatorProps> {
   state = {
     showSidebar: false
   };
@@ -29,9 +40,9 @@ export default class TopTabNavigator extends Component {
                 backgroundColor: '#1ABC9C',
                 alignContent: 'center'
               }}
-              onPress={() =>
-                this.setState({ showSidebar: !this.state.showSidebar })
-              }
+              onPress={() => {
+                this.props.navigation.openDrawer();
+              }}
             >
               <Icon name="menu" style={{ color: '#E8E8E8', fontSize: 27 }} />
             </Button>
