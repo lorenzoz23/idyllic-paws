@@ -15,7 +15,7 @@ export default class About extends Component {
   render() {
     return (
       <Container>
-        <Content style={{ backgroundColor: '#A9E6DA' }}>
+        <Content style={{ backgroundColor: '#A9E6DA' }} padder>
           <Card style={{ flex: 0 }}>
             <CardItem>
               <Left>

@@ -22,7 +22,7 @@ const Drawer = createDrawerNavigator();
 
 export default class App extends Component {
   state = {
-    width: 200
+    width: 0
   };
   componentDidMount = () => {
     this.setState({

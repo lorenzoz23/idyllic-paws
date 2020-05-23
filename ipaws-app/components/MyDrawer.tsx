@@ -21,6 +21,17 @@ const MyDrawer = (props: any) => {
               }}
             />
           </View>
+          <DrawerItem
+            icon={({ color, size }) => (
+              <Icon name="home" style={{ color: color, fontSize: size }} />
+            )}
+            label="Home"
+            activeBackgroundColor="#A9E6DA"
+            onPress={() => {
+              props.navigation.navigate('Main');
+            }}
+            {...props}
+          />
           <ListItem first noIndent>
             <Text>Learn More</Text>
           </ListItem>
@@ -108,21 +119,6 @@ const MyDrawer = (props: any) => {
             onPress={() =>
               Linking.openURL('https://www.facebook.com/idyllicpawsvet')
             }
-            {...props}
-          />
-        </View>
-        <View>
-          <DrawerItem
-            style={{
-              marginBottom: 15
-            }}
-            icon={({ color, size }) => (
-              <Icon name="home" style={{ color: color, fontSize: size }} />
-            )}
-            label="Back to Home"
-            onPress={() => {
-              props.navigation.navigate('Main');
-            }}
             {...props}
           />
         </View>
