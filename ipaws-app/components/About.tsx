@@ -14,7 +14,12 @@ import { Image } from 'react-native';
 export default class About extends Component {
   render() {
     return (
-      <Container>
+      <Container
+        style={{
+          backgroundColor: '#A9E6DA',
+          paddingTop: 20
+        }}
+      >
         <Content style={{ backgroundColor: '#A9E6DA' }} padder>
           <Card style={{ flex: 0 }}>
             <CardItem>

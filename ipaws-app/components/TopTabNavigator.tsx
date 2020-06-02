@@ -13,6 +13,7 @@ import Home from './Home';
 import Services from './Services';
 import Clients from './Clients';
 import Contact from './Contact';
+import { StatusBar } from 'react-native';
 
 const Tab = createMaterialTopTabNavigator();
 
@@ -26,38 +27,38 @@ export default class TopTabNavigator extends Component<TopTabNavigatorProps> {
   };
   render() {
     return (
-      <Container>
+      <Container
+        style={{
+          backgroundColor: '#1ABC9C',
+          paddingTop: 20
+        }}
+      >
         <Header
           style={{
-            backgroundColor: '#1ABC9C'
+            backgroundColor: '#1ABC9C',
+            elevation: 0
           }}
-          androidStatusBarColor="#1ABC9C"
         >
-          <Left>
-            <Button
-              transparent
-              style={{
-                backgroundColor: '#1ABC9C',
-                alignContent: 'center'
-              }}
-              onPress={() => {
-                this.props.navigation.openDrawer();
-              }}
-            >
-              <Icon name="menu" style={{ color: '#E8E8E8', fontSize: 27 }} />
-            </Button>
-          </Left>
-          <Right>
+          <StatusBar translucent={true} backgroundColor="transparent" />
+          <Left style={{ paddingLeft: 5 }}>
             <Title
               style={{
-                fontSize: 27,
                 fontWeight: 'bold',
-                color: '#E8E8E8',
-                alignSelf: 'center'
+                color: '#E8E8E8'
               }}
             >
               Idyllic Paws
             </Title>
+          </Left>
+          <Right style={{ paddingRight: 5 }}>
+            <Button
+              transparent
+              onPress={() => {
+                this.props.navigation.openDrawer();
+              }}
+            >
+              <Icon name="menu" style={{ color: '#E8E8E8' }} />
+            </Button>
           </Right>
         </Header>
         <Tab.Navigator
