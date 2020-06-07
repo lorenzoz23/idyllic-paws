@@ -84,7 +84,6 @@ export default class HolisticApproach extends Component {
           </Card>
           <Accordion
             dataArray={holisticDataArray}
-            expanded={0}
             headerStyle={{
               backgroundColor: '#1ABC9C',
               borderRadius: 10,
